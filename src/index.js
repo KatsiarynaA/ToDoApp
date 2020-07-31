@@ -18,15 +18,25 @@ const AppHeader = () => {
 };
 
 const SearchPanel = () => {
-
     const searchText = 'Type here to search';
-    return <input placeholder={searchText}/>;
+    const searchStyle = {
+        fontSize: '20px'
+    };
+
+    return <input
+        style={searchStyle}
+        placeholder={searchText}
+        disabled //disabled={true}
+    />;
 };
 
 const App = () => {
 
+    const value = '<script>alert("")</script>';
+
     return (
         <div>
+            {value}
             <AppHeader/>
             <SearchPanel/>
             <TodoList/>
